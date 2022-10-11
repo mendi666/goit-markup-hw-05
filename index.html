@@ -18,6 +18,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -61,7 +65,9 @@
       <section class="hero">
         <div class="container hero-container">
           <h1 class="hero-title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
-          <button class="hero-btn" type="button">Request our service</button>
+          <button class="hero-btn" data-modal-open type="button">
+            Request our service
+          </button>
         </div>
       </section>
       <section class="benefits">
@@ -103,29 +109,32 @@
         <div class="container">
           <h2 class="whatwedo-title">What we do</h2>
           <ul class="whatwedo-list list">
-            <li>
+            <li class="whatwedo-item">
               <img
                 src="./images/img-1.jpg"
                 alt="somebody typing on keyboard connected to tablet"
                 width="370"
                 height="294"
               />
+              <div class="whatwedo-box">DESKTOP APPS</div>
             </li>
-            <li>
+            <li class="whatwedo-item">
               <img
                 src="./images/img-2.jpg"
                 alt="somebody looking at phone in front of laptop"
                 width="370"
                 height="294"
               />
+              <div class="whatwedo-box">MOBILE APPS</div>
             </li>
-            <li>
+            <li class="whatwedo-item">
               <img
                 src="./images/img-3.jpg"
                 alt="somebody looking at tablet choosing a color in it "
                 width="370"
                 height="294"
               />
+              <div class="whatwedo-box">DESIGN SOLUTIONS</div>
             </li>
           </ul>
         </div>
@@ -421,5 +430,19 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon">
+            <use
+              href="./images/symbol-defs.svg#close-icon"
+              width="18"
+              height="18"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
